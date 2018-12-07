@@ -1,0 +1,3 @@
+class ScoreCard < ApplicationRecord
+
+end
