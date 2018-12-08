@@ -1,11 +1,14 @@
-class CluesController < ApplicationController
+module Api
+  class CluesController < ApplicationController
   before_action :set_clue, only: [:show, :update, :destroy]
 
   # GET /clues
   def index
-    @clues = Clue.all
 
-    render json: @clues
+    @category = Category.find(params[:category_id])
+    @clues = @category.clues
+
+    render json: [@category, @clues]
   end
 
   # GET /clues/1
@@ -48,5 +51,5 @@ class CluesController < ApplicationController
     def clue_params
       params.require(:clue).permit(:id, :answer, :question, :value, :airdate)
     end
-  
+end
 end
