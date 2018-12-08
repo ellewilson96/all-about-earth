@@ -1,5 +1,4 @@
 class Clue < ActiveRecord::Base
-  attr_accessor :airdate, :answer, :question, :value, :category_id, :category
-  belongs_to :category
-
+  has_and_belongs_to_many :categories
+  has_many :users, through: :categories
 end

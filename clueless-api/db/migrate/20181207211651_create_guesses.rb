@@ -1,8 +1,7 @@
 class CreateGuesses < ActiveRecord::Migration[5.2]
   def change
     create_table :guesses do |t|
-      t.integer :guess
-      t.date :date
+      t.integer :user_id
       t.text :answer
     end
   end

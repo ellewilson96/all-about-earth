@@ -46,6 +46,6 @@ class GuessesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def guess_params
-      params.fetch(:guess, {})
+      params.require(:guess).permit(:answer, :user_id)
     end
 end
