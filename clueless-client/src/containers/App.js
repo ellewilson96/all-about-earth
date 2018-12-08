@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import LoginForm from '../components/LoginForm';
+import Clues from '../components/Clues';
+import Login from '../components/Login';
+import Question from '../components/Question';
+import SignUp from '../components/SignUp';
+
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
@@ -15,8 +21,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      {this.state.clues.map(clue => clue.question[1])}
-      {console.state.clues.map(clue => clue.question[1])}
+      {this.state.map.clues}
       </div>
     )
   }

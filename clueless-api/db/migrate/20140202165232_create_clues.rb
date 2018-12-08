@@ -5,7 +5,8 @@ class CreateClues < ActiveRecord::Migration[5.2]
       t.text :question
       t.integer :value
       t.datetime :airdate
-
+      t.integer :category_id
+      
       t.timestamps
     end
   end

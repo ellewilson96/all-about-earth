@@ -1,3 +1,5 @@
+import React from 'react';
+
 class Clues extends React.Component {
   render() {
     return (
@@ -16,7 +18,4 @@ class Clues extends React.Component {
         })
       })
   }
-}
-
-
 }
