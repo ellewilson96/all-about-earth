@@ -1,3 +1,6 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :date
+
+  has_many :categories
+  has_many :clues, through: :categories
 end

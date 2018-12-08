@@ -1,3 +1,5 @@
 class GuessSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :answer
+
+  belongs_to :user
 end
