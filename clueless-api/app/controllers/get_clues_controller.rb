@@ -7,9 +7,9 @@ def clues
       @clues = body.map{|clue|
         {question: clue["question"],
         answer: clue["answer"],
-        value: clue[0]["value"],
-        airdate: clue[0]["airdate"],
-        category: clue[0]["category"],
+        value: clue["value"],
+        airdate: clue["airdate"],
+        category: clue["category"],
       }}
       render json: @clues
     else

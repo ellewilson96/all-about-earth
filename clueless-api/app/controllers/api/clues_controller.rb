@@ -49,7 +49,7 @@ module Api
 
     # Only allow a trusted parameter "white list" through.
     def clue_params
-      params.require(:clue).permit(:id, :answer, :question, :value, :airdate)
+      params.require(:clue).permit(:id, :answer, :question, :value, :airdate, :category_id)
     end
 end
 end
