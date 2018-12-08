@@ -3,7 +3,6 @@ import './App.css';
 import LoginForm from '../components/LoginForm';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import store from './store'
 
 const APIURL = `http://jservice.io/api/clues`
 
@@ -17,6 +16,7 @@ class App extends Component {
     return (
       <div>
       {this.state.clues.map(clue => clue.question[1])}
+      {console.state.clues.map(clue => clue.question[1])}
       </div>
     )
   }
