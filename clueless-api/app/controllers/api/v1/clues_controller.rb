@@ -1,14 +1,12 @@
-module Api
+module Api::V1
   class CluesController < ApplicationController
   before_action :set_clue, only: [:show, :update, :destroy]
 
   # GET /clues
   def index
+    @clues = Clue.all
 
-    @category = Category.find(params[:category_id])
-    @clues = @category.clues
-
-    render json: [@category, @clues]
+    render json: @clues
   end
 
   # GET /clues/1

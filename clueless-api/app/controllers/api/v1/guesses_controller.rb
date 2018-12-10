@@ -1,4 +1,4 @@
-module Api
+module Api::V1
 
   class GuessesController < ApplicationController
     before_action :set_guesses, only: [:show, :update]
