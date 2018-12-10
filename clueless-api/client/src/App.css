@@ -1,5 +1,4 @@
 .App {
-
   text-align: center;
 }
 
@@ -11,4 +10,10 @@
   background-color: white;
   opacity: .9;
   border-radius: 25px;
+}
+
+.clues-container {
+  padding-left: 10px;
+  text-align: left;
+  border: 1px solid black;
 }

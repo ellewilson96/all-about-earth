@@ -10,7 +10,7 @@ def clues
         answer: clue["answer"],
         value: clue["value"],
         airdate: clue["airdate"],
-        category: clue["category"],
+        category: clue["category"]
       }}
       render json: @clues
     else

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import CluesContainer from './containers/CluesContainer';
+import CategoriesContainer from './containers/CategoriesContainer';
 import Clues from './components/Clues';
 
 import { connect } from 'react-redux';
@@ -13,7 +14,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Clueless Trivia</h1>
         </header>
+        <div class="clues-container">
         <CluesContainer />
+        </div>
       </div>
     );
   }
