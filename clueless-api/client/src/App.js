@@ -7,13 +7,15 @@ import Clues from './components/Clues';
 import { connect } from 'react-redux';
 
 class App extends Component {
-
   render() {
     return (
-      <div>
-      {this.props.clues}
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Clueless Trivia</h1>
+        </header>
+        <CluesContainer />
       </div>
-    )
+    );
   }
 }
 

@@ -5,7 +5,8 @@ def clues
     if @resp.success?
 
       @clues = body.map{|clue|
-        {question: clue["question"],
+        {id: clue["id"],
+        question: clue["question"],
         answer: clue["answer"],
         value: clue["value"],
         airdate: clue["airdate"],
