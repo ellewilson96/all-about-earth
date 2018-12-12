@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './Clues.css'
+import axios from 'axios';
+import { connect } from 'react-redux'
 
 class Clues extends Component {
   state = {
@@ -6,9 +9,8 @@ class Clues extends Component {
   }
 
   componentDidMount() {
-    fetch('./api/clues')
+    axios.get('./api/v1/clues.json')
       .then(response => {
-        console.log(response)
         this.setState({
           clues: response.data
         })
@@ -17,12 +19,39 @@ class Clues extends Component {
 
 render() {
   console.log(this.state.clues)
-  return (
+  const renderClues = this.state.clues.map((clue, id) =>
+
+    <li
+      key={clue.id}
+      onClick={() => this.props.addClue(clue, this.state.clues)}
+      className="single-clue"
+      >
+      <h4 className="category-title">{clue.category.title}</h4>
+      <h2>${clue.value}</h2>
+      <h4>{clue.question}.</h4>
+      <h5>What is... {clue.answer}?</h5>
+    </li>
+)
+  return(
     <div>
-    {this.state.clues}
+      NavBar Component
+    <div className="bodymargin">
+      {renderClues}
+    </div>
     </div>
   )
 }
 }
+const mapStateToProps = state => {
+  return {
+    clues: state.clues
+  }
+}
 
-export default Clues;
+const mapDispatchToProps = dispatch => {
+  return {
+    addClue: (clue) => dispatch({ type: 'ADD_CLUE', clue }),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Clues);

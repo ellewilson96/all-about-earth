@@ -11,11 +11,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Clueless Trivia</h1>
-        </header>
+        <div className="app-header">
+          <div className="app-title">Clueless Trivia</div>
+          <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
+        </div>
         <div class="clues-container">
-        <CluesContainer />
+        <Clues />
         </div>
       </div>
     );

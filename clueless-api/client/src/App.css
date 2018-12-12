@@ -2,18 +2,25 @@
   text-align: center;
 }
 
-.whiteText {
-  margin: 190px 5px;
-  padding: 20px 20px;
-  color: black;
-  text-shadow: 1px black;
-  background-color: white;
-  opacity: .9;
-  border-radius: 25px;
+.app-header {
+  background-image: linear-gradient(to top left, #f7e096, #96467b);
+}
+
+.app-title {
+  font-size: 4em;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.jservice {
+  font-size: 0.8em;
+  margin: 0 10px 10px;
+  vertical-align: top;
+  color: #FFFFFF;
 }
 
 .clues-container {
-  padding-left: 10px;
-  text-align: left;
-  border: 1px solid black;
+  box-shadow: 0 0 10px 0 white;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }

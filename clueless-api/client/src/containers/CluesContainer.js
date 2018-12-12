@@ -21,18 +21,7 @@ class CluesContainer extends Component {
       render() {
           return (
             <div className="clues-container">
-              {this.state.clues.map( clue => {
-                  return (
-                      <div className="single-clue" key={clue.id}>
-                          <h4>Category: {clue.category.title}
-                          <li>${clue.value} => {clue.question}.
-                            <li>What is... {clue.answer}?</li>
-                          </li>
-                          </h4>
-                      </div>
-                  )
-              })}
-          </div>
+              </div>
           )
       }
   }
