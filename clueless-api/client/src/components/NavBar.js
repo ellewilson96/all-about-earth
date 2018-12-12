@@ -16,6 +16,7 @@ export default function NavBar(){
                <li><a href="#">Random</a></li>
              </ul>
              <img src={alex} class="alex" alt="iconic" />
+             <div className="title">Clueless Trivia</div>
              <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
          </nav>
        </header>

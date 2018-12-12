@@ -1,11 +1,24 @@
+
+@media only screen and (min-width: 768px) {
+ .clues-card {
+  column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .clues-card {
+  column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  .clues-card {
+  column-count: 3;
+  }
+}
+
 .App {
   text-align: center;
   background-image: url(./banner.jpg);
   padding-top: 100px;
-}
-
-.clues-container {
-  text-transform: uppercase;
-  color: #FFFFFF;
-  opacity: 1.0;
 }

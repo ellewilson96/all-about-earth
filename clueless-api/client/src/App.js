@@ -14,9 +14,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
         <NavBar />
-        <div class="clues-container">
+
+        <div className="clues-card">
         <Clues />
         </div>
       </div>
@@ -26,7 +26,8 @@ class App extends Component {
 
   const mapStateToProps = state => {
   return {
-    question: state.question
+    question: state.question,
+    answer: state.answer
  }}
 
 export default connect(mapStateToProps)(App);

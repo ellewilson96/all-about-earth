@@ -20,7 +20,7 @@ class CluesContainer extends Component {
       }
       render() {
           return (
-            <div className="clues-container">
+            <div className="clues-card">
               </div>
           )
       }
