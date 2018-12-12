@@ -1,0 +1,41 @@
+header {
+    background-color: #0341a5;
+    position: fixed;
+    top: 0;
+    left: 40px;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 10px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+.alex {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+}
+
+.jservice {
+  font-size: 0.8em;
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  right: 5;
+  opacity: 0.8;
+}

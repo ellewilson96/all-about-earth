@@ -1,24 +1,33 @@
+.bodymargin {
+  box-shadow: 0 0 5px 0 white;
+  width: 80%;
+  margin: auto;
+  background-image: linear-gradient(to top left, #96467b, #f7e096);
+  margin-top: 150px;
+  opacity: 1.0;
+}
+
+.single-clue {
+  font-family: 'ITC Korinna', sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+
 li.single-clue {
     border-radius: 15px;
     border: 2px solid #0341a5;
     display: block;
-    margin:auto;
     vertical-align: middle;
-    margin: 20px auto;
-    padding: 10px;
-    text-align: center;
+    margin: 20px auto 0px;
+    padding-bottom: 10px;
     width: 45%;
     box-shadow: 0 0 10px 0 gray;
     background-color: #0341a5;
-
 }
+
+
 
 h4.category-title {
   text-transform: uppercase;
 
-}
-
-.bodymargin {
-  margin-top: 70px;
-  background-image: linear-gradient(to top left, #96467b, #f7e096);
 }

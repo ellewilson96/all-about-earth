@@ -34,10 +34,7 @@ render() {
 )
   return(
     <div>
-      NavBar Component
-    <div className="bodymargin">
       {renderClues}
-    </div>
     </div>
   )
 }
@@ -48,10 +45,5 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addClue: (clue) => dispatch({ type: 'ADD_CLUE', clue }),
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Clues);
+export default connect(mapStateToProps)(Clues);

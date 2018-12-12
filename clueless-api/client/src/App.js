@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
 import CluesContainer from './containers/CluesContainer';
 import CategoriesContainer from './containers/CategoriesContainer';
 import Clues from './components/Clues';
+import NavBar from './components/NavBar';
 
 import { connect } from 'react-redux';
+import { banner } from './banner.jpg'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="app-header">
-          <div className="app-title">Clueless Trivia</div>
           <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
-        </div>
+        <NavBar />
         <div class="clues-container">
         <Clues />
         </div>
