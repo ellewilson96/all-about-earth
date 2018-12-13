@@ -1,7 +1,6 @@
 import React from 'react';
 import './NavBar.css'
 import alex from '../alex-trebek.jpg'
-import banner from '../banner.jpg'
 
 export default function NavBar(){
 
@@ -15,7 +14,7 @@ export default function NavBar(){
                <li><a href="#">By Category</a></li>
                <li><a href="#">Random</a></li>
              </ul>
-             <img src={alex} class="alex" alt="iconic" />
+             <img src={alex} className="alex" alt="iconic" />
              <div className="title">Clueless Trivia</div>
              <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
          </nav>

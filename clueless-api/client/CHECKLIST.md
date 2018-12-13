@@ -2,9 +2,9 @@
 
 [ x ] There should be 2 container components
 
-There should be 5 stateless components
+[ x ] There should be 5 stateless components
 
-[ x ] There should be 3 routes
+[ ] There should be 3 routes
 
 [ x ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs; docs for v4 can be found here)
 
@@ -22,4 +22,4 @@ Use Redux middleware to respond to and modify state change
 
 [ x ] Good understanding of state and props in React
 
-[ x ] Knowledge of async JS with Promises 
+[ x ] Knowledge of async JS with Promises
