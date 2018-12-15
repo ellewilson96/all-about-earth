@@ -1,6 +1,6 @@
 header {
     background-color: #0f0687;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: fluid;
     width: 100%;

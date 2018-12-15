@@ -1,36 +1,54 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux'
 
 class CategoriesContainer extends Component {
-      constructor(props){
-          super(props)
-          this.state = {
-              categories: []
-          }
-      }
-      componentDidMount() {
-          axios.get('http://localhost:3001/api/v1/categories.json')
-          .then(response => {
-              console.log(response)
-              this.setState({
-                  categories: response.data
-              })
-          })
-          .catch(error => console.log(error))
-      }
-      render() {
-          return (
-            <div className="categories-container">
-              {this.state.categories.map( category => {
-                  return (
-                      <div className="single-category" key={category.id}>
-                          <h4>{category.title}.</h4>
-                      </div>
-                  )
-              })}
-          </div>
-          )
-      }
+  state = {
+    categories: []
   }
 
-  export default CategoriesContainer;
+  componentDidMount() {
+    axios.get('./api/v1/categories.json')
+      .then(response => {
+        this.setState({
+          categories: response.data
+        })
+    })
+  }
+
+
+render() {
+  console.log(this.state.categories)
+  const renderCategories = this.state.categories.map((category, id) =>
+    <li
+      key={category.id}
+      >
+      <div className="clue">
+          <h3 className="category-title">{category.title}</h3>
+        <div className="clue-sides">
+          <div className="clue-front">
+          </div>
+          <div className="clue-back">
+          </div>
+        </div>
+      </div>
+    </li>
+)
+  return(
+    <div>
+      {renderCategories}
+    </div>
+  )
+}
+}
+
+
+
+const mapStateToProps = state => {
+  return {
+    categories: state.categories
+  }
+}
+
+
+export default connect(mapStateToProps)(CategoriesContainer);

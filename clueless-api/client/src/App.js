@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import CluesContainer from './containers/CluesContainer';
 import CategoriesContainer from './containers/CategoriesContainer';
