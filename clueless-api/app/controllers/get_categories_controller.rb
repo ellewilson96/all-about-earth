@@ -1,14 +1,14 @@
 class GetCategoriesController < ApplicationController
 def categories
-    @resp = Faraday.get 'http://jservice.io/api/clues'
+    @resp = Faraday.get('http://jservice.io/api/category?id='+ rand(1..1000).to_s)
     body = JSON.parse(@resp.body)
     if @resp.success?
-
-      @categories = body.map{|category|
-        {id: category["id"],
-        title: category["title"],
-      }}
-      render json: @categories
+      @category = body
+        {id: body["id"],
+        title: body["title"],
+        clues: []
+      }
+      render json: @category
     else
       @error = body["meta"]["errorDetail"]
     end

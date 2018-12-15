@@ -1,18 +1,17 @@
 class GetRandomClueController < ApplicationController
-def random_clue
+def random
     @resp = Faraday.get 'http://jservice.io/api/random'
     body = JSON.parse(@resp.body)
     if @resp.success?
-
-      @clue = @resp
-        {id: @resp["id"],
-        question: @resp["question"],
-        answer: @resp["answer"],
-        value: @resp["value"],
-        airdate: @resp["airdate"],
-        category: @resp["category"]
+      @random = body.map{|clue|
+        {id: clue["id"],
+        question: clue["question"],
+        answer: clue["answer"],
+        value: clue["value"],
+        airdate: clue["airdate"],
+        category: clue["category"]
       }}
-      render json: @clue
+      render json: @random
     else
       @error = body["meta"]["errorDetail"]
     end

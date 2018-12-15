@@ -9,10 +9,10 @@ export default function NavBar(){
         <header>
           <nav>
              <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">By Category</a></li>
-               <li><a href="#">Random</a></li>
+               <li><a href="/">Home</a></li>
+               <li><a href="/about">About</a></li>
+               <li><a href="/categories">By Category</a></li>
+               <li><a href="/random">Random</a></li>
              </ul>
              <img src={alex} className="alex" alt="iconic" />
              <div className="title">Clueless Trivia</div>
