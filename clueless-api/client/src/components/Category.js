@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Clues.css'
+import './Category.css'
 
-  class Random extends Component {
+  class Category extends Component {
     constructor(props) {
       super(props);
       this.store = this.props.store;
@@ -12,13 +12,13 @@ import './Clues.css'
     <li
       key={this.props.id}
       >
-      <div className="clue-card">
+      <div className="category-card">
       <h3>{this.props.title}</h3>
-          <div className="clue">
-            <div className="clue-sides">
-              <div className="clue-front">
+          <div className="category">
+            <div className="category-sides">
+              <div className="category-front">
               </div>
-              <div className="clue-back">
+              <div className="category-back">
               </div>
               </div>
               </div>
@@ -28,4 +28,4 @@ import './Clues.css'
 }
 }
 
-export default Random;
+export default Category;

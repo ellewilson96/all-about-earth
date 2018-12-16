@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
-import Clues from '../components/Clues'
+import Category from '../components/Category'
 import { connect } from 'react-redux'; /* code change */
 import axios from 'axios';
 
-class CluesContainer extends Component {
+class CategoryContainer extends Component {
   constructor(props){
       super(props)
           this.state = {
-              clues: []
+              category: []
           }
       }
 
   componentDidMount() {
-      axios.get('http://localhost:3001/api/v1/clues.json')
+      axios.get('http://localhost:3001/api/v1/categories.json')
           .then(response => {
               console.log(response.data)
               this.setState({
-                  clues: response.data
+                  category: response.data
               })
           })
       .catch(error => console.log(error))
     }
     render() {
         return (
-          <Clues />
+          <div className="category-container">
+          <h3><Category /></h3>
+        </div>
         )
     }
   }
 
   const mapStateToProps = (state) => {
-    return { clues: state.clues };
+    return { category: state.category };
   };
 
-  export default connect(mapStateToProps)(CluesContainer);
+  export default connect(mapStateToProps)(CategoryContainer);

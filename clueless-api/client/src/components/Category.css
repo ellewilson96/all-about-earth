@@ -1,4 +1,4 @@
-.categories-card {
+.category-card {
   width: 85%;
   padding-top: 100px;
   margin: auto;
@@ -6,7 +6,7 @@
   color: #FFFFFF;
 }
 
-.categories-card li {
+.category-card li {
  list-style: none;
 }
 
