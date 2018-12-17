@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Clues.css'
+import '../styles/Clues.css'
 
   class Random extends Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Clues.css'
+import '../styles/Clues.css'
 
 class Clues extends Component {
   state = {
@@ -11,8 +11,6 @@ render() {
     <li
       key={clue.id}
       >
-      
-      <div className="clues-card">
       <div className="clue">
           <h3 className="category-title">{clue.category.title}</h3>
             <h2 className="clue-value">${clue.value}</h2>
@@ -24,7 +22,6 @@ render() {
             <h5>What is... {clue.answer}?</h5>
           </div>
         </div>
-      </div>
       </div>
     </li>
 )

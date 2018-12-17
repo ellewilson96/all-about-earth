@@ -18,10 +18,11 @@
 }
 
 body {
-  background-image: url(./banner.jpg);
+  background-image: url(../banner.jpg);
+  padding-top: 50px;
+
 }
 
 .App {
   text-align: center;
-  padding-top: 100px;
 }

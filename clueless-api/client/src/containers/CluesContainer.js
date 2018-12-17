@@ -23,7 +23,7 @@ class CluesContainer extends Component {
     }
     render() {
         return (
-          <Clues />
+          <Clues clues={clues}/>
         )
     }
   }

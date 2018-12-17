@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'
+import '../styles/NavBar.css'
 import alex from '../alex-trebek.jpg'
 
 export default function NavBar(){
