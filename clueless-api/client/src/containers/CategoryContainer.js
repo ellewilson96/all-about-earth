@@ -14,7 +14,6 @@ class CategoryContainer extends Component {
   componentDidMount() {
       axios.get('http://localhost:3001/api/v1/categories.json')
           .then(response => {
-              console.log(response.data)
               this.setState({
                   category: response.data
               })
@@ -23,9 +22,9 @@ class CategoryContainer extends Component {
     }
     render() {
         return (
-          <div className="category-container">
-          <h3><Category /></h3>
-        </div>
+          <div>
+          {Category}
+          </div>
         )
     }
   }

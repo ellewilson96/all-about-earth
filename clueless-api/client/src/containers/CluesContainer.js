@@ -7,8 +7,9 @@ class CluesContainer extends Component {
   constructor(props){
       super(props)
           this.state = {
-              clues: []
+              clues: this.props.clues
           }
+          console.log(props)
       }
 
   componentDidMount() {
@@ -23,13 +24,16 @@ class CluesContainer extends Component {
     }
     render() {
         return (
-          <Clues clues={clues}/>
+          <div className="clues-card">
+          {Clues}
+          </div>
         )
     }
   }
 
   const mapStateToProps = (state) => {
     return { clues: state.clues };
+    debugger
   };
 
   export default connect(mapStateToProps)(CluesContainer);

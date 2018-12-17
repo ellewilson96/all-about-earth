@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import '../styles/Category.css'
 
   class Category extends Component {
-    constructor(props) {
-      super(props);
-      this.store = this.props.store;
-    }
 
   render() {
+    console.log(this.props)
     return(
+  <div>
     <li
       key={this.props.id}
       >
@@ -24,7 +22,8 @@ import '../styles/Category.css'
               </div>
         </div>
     </li>
-  )
+  </div>
+)
 }
 }
 

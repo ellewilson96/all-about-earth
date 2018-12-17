@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import CluesContainer from '../containers/CluesContainer'
 import '../styles/Clues.css'
 
 class Clues extends Component {
-  state = {
-    clues: []
-  }
 
 render() {
-  const renderClues = this.state.clues.map((clue, id) =>
+  console.log(this.props.state)
+  const renderClues = (clue, id) =>
     <li
       key={clue.id}
       >
@@ -24,7 +23,6 @@ render() {
         </div>
       </div>
     </li>
-)
   return(
     <div>
       {renderClues}

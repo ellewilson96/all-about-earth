@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../styles/NavBar.css'
+import { Link } from 'react-router-dom';
 import alex from '../alex-trebek.jpg'
 
-export default function NavBar(){
-
+class NavBar extends Component {
+render() {
     return (
       <div>
         <header>
           <nav>
              <ul>
-               <li><a href="/">Home</a></li>
-               <li><a href="/about">About</a></li>
-               <li><a href="/categories">By Category</a></li>
-               <li><a href="/random">Random</a></li>
+               <li><Link to="/">Home</Link></li>
+               <li><Link to="/about">About</Link></li>
+               <li><Link to="/categories">By Category</Link></li>
+               <li><Link to="/clues">All Clues</Link></li>
+               <li><Link to="/random">Random</Link></li>
              </ul>
              <img src={alex} className="alex" alt="iconic" />
              <div className="title">Clueless Trivia</div>
@@ -22,3 +24,6 @@ export default function NavBar(){
       </div>
     )
 }
+}
+
+export default NavBar;
