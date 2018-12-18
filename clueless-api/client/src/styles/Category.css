@@ -1,60 +1,59 @@
-.category-card {
-  width: 85%;
-  padding-top: 100px;
-  margin: auto;
+.category-title {
   text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  background-color: #0341a5;
+  opacity: 0.7;
+  font-family: 'helvetica', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000000;
+  cursor: default;
+}
+
+.category-card {
+  width: 60%;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
   color: #FFFFFF;
 }
 
 .category-card li {
  list-style: none;
+
 }
 
 .category {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'ITC Korinna', sans-serif;
   width: 100%;
-  height: 40%;
+  height: 50%;
   font-weight: bold;
   border-radius: 5px;
   border: 2px solid #0341a5;
   display: inline-block;
-  margin-bottom: 30px;
   box-shadow: 0 0 10px 0 black;
   background-color: #0341a5;
   text-shadow: 2px 2px #000000;
   cursor: default;
-  z-index: 1;
 }
 
-h2.category-value {
-  color: #dba876;
-  font-weight: bolder;
+.category h4 {
+  padding-top: 20px;
+  cursor: pointer;
+
 }
 
-.category-sides {
-  font-family: 'ITC Korinna', sans-serif;
+.differentClue {
+  padding-top: 20px;
 }
 
-.category-sides:hover {
-  transform-style: preserve-3d;
-  transition: all .7s linear;
-  transform: rotateY(180deg);
-}
-
-.category-sides:hover > .category-front {
-  opacity: 0;
-  transition: opacity 1s ease-in, visibility .75s linear;
-}
-
-.category-back {
-  display: none;
-  transform: rotateY(180deg);
-}
-
-.category-sides:hover > .category-back {
-  text-align: center;
-  position: relative;
-  margin: auto;
-  display: block;
+.differentClue button {
+  box-shadow: 0 0 5px 0 black;
 
 }

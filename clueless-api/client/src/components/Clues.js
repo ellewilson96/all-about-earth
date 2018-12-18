@@ -23,8 +23,13 @@ render() {
     </li>
 )
   return(
+    <div>
+    <div className="clues-title">
+    ALL CLUES!
+    </div>
     <div className="clues-card">
       {renderClues}
+    </div>
     </div>
   )
 }

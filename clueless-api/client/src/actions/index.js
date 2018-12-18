@@ -4,3 +4,10 @@ function fetchClues(clues) {
     clues: clues
   };
 }
+
+function fetchCategory(category) {
+  return  {
+    type: 'ADD_CATEGORY',
+    category: category
+  };
+}

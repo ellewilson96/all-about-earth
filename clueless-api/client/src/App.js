@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/App.css';
+import NavBar from './components/NavBar';
 import Home from './containers/Home';
-import Category from './components/Category';
+import CategoryContainer from './containers/CategoryContainer';
 import CluesContainer from './containers/CluesContainer';
 import Random from './components/Random';
 import About from './components/About';
-import NavBar from './components/NavBar';
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
       <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/category" component={Category} />
+      <Route path="/categories" component={CategoryContainer} />
       <Route path="/clues" component={CluesContainer} />
       <Route path="/random" component={Random} />
       </Switch>
@@ -28,7 +28,7 @@ class App extends Component {
   return (
     <BrowserRouter>
       <Switch>
-      <App/>
+      <App />
       </Switch>
       </BrowserRouter>
     )

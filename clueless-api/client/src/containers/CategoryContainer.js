@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Category from '../components/Category'
-import { connect } from 'react-redux'; /* code change */
 import axios from 'axios';
+import Category from '../components/Category'
+
 
 class CategoryContainer extends Component {
   constructor(props){
@@ -11,26 +11,24 @@ class CategoryContainer extends Component {
           }
       }
 
-  componentDidMount() {
-      axios.get('http://localhost:3001/api/v1/categories.json')
-          .then(response => {
-              this.setState({
-                  category: response.data
-              })
-          })
-      .catch(error => console.log(error))
-    }
+      componentDidMount() {
+          axios.get('http://localhost:3001/api/v1/categories.json')
+              .then(response => this.setState({
+                      category: response.data
+                  }))
+          .catch(error => this.setState({
+            error
+          }))
+        }
+
+
     render() {
         return (
           <div>
-          <Category />
+          <Category category={this.state.category}/>
           </div>
         )
     }
-  }
+}
 
-  const mapStateToProps = (state) => {
-    return { category: state.category };
-  };
-
-  export default connect(mapStateToProps)(CategoryContainer);
+  export default CategoryContainer;

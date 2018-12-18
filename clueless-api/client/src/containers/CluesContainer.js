@@ -18,7 +18,6 @@ class CluesContainer extends Component {
       .catch(error => this.setState({
         error
       }))
-      console.log(this.state)
     }
 
     render() {

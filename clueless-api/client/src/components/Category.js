@@ -1,29 +1,39 @@
 import React, { Component } from 'react';
 import '../styles/Category.css'
 
-  class Category extends Component {
+class Category extends Component {
+
+handleEvent = () => {
+  this.setState({
+      category: this.props.category
+    })
+}
 
   render() {
-    console.log(this.props)
+    const category = this.props.category
     return(
-  <div>
-    <li
-      key={this.props.id}
-      >
+    <div>
+      <div className="category-title">
+      PLAY BY CATEGORY!
+      </div>
       <div className="category-card">
-      <h3>{this.props.title}</h3>
-          <div className="category">
+    <li
+      key={category.id}
+      >
+        <div className="category">
+          <h2>{category.title}</h2>
             <div className="category-sides">
-              <div className="category-front">
-              </div>
-              <div className="category-back">
-              </div>
-              </div>
-              </div>
+            <h3>{category.clues_count} CLUES</h3>
+              <h4>CLICK TO PLAY</h4>
+              <div className="differentClue">
+               <button onClick={this.handleEvent}>DIFFERENT CLUE</button>
+               </div>
+            </div>
         </div>
     </li>
   </div>
-)
+  </div>
+  )
 }
 }
 
