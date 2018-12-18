@@ -23,7 +23,7 @@ class CategoryContainer extends Component {
     render() {
         return (
           <div>
-          {Category}
+          <Category />
           </div>
         )
     }

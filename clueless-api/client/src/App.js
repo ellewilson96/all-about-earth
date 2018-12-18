@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './styles/App.css';
 import Home from './containers/Home';
 import Category from './components/Category';
-import Clues from './components/Clues';
+import CluesContainer from './containers/CluesContainer';
 import Random from './components/Random';
 import About from './components/About';
 import NavBar from './components/NavBar';
@@ -19,7 +19,7 @@ class App extends Component {
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/category" component={Category} />
-      <Route path="/clues" component={Clues} />
+      <Route path="/clues" component={CluesContainer} />
       <Route path="/random" component={Random} />
       </Switch>
       </BrowserRouter>
