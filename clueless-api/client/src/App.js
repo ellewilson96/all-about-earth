@@ -13,8 +13,10 @@ class App extends Component {
   render() {
     const App = () => (
       <div>
-      <NavBar />
       <BrowserRouter>
+      <div>
+      <NavBar />
+      <div className="container">
       <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
@@ -22,6 +24,8 @@ class App extends Component {
       <Route path="/clues" component={CluesContainer} />
       <Route path="/random" component={Random} />
       </Switch>
+      </div>
+      </div>
       </BrowserRouter>
       </div>
     )

@@ -3,10 +3,9 @@ import '../styles/Category.css'
 
 class Category extends Component {
 
-handleEvent = () => {
-  this.setState({
-      category: this.props.category
-    })
+handleEvent(e) {
+  e.preventDefault();
+  console.log(this.props.category.clues)
 }
 
   render() {
@@ -24,10 +23,9 @@ handleEvent = () => {
           <h2>{category.title}</h2>
             <div className="category-sides">
             <h3>{category.clues_count} CLUES</h3>
-              <h4>CLICK TO PLAY</h4>
-              <div className="differentClue">
-               <button onClick={this.handleEvent}>DIFFERENT CLUE</button>
-               </div>
+              <button onClick={this.handleEvent.bind(this)}>CLICK TO PLAY</button>
+              <div className="category-clues">
+              </div>
             </div>
         </div>
     </li>

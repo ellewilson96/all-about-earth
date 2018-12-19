@@ -1,25 +1,30 @@
-header {
+.title {
+  margin: auto;
+  padding-left: 60px;
+}
+
+nav {
     background-color: #0f0687;
     position: fixed;
     top: 0;
-    height: fluid;
+    height: 80px;
     width: 100%;
     box-shadow: 0 0 25px 0 black;
     z-index: 1;
 }
 
-header * {
+nav * {
   display: inline;
 }
 
-header li {
+.links {
     display: inline;
     position: relative;
-    padding-top: 30px;
-    left: 80px;
+    padding-top: 55px;
+    left: 60px;
     float: left;
 }
-header li a {
+.links a {
     color: white;
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
@@ -31,7 +36,7 @@ header li a {
     margin-right: 10px;
 }
 
-header li a:hover {
+.links a:hover {
   color: #ffffff;
   text-shadow: 2px 2px #6b89ce;
   cursor: pointer;
@@ -41,10 +46,8 @@ header li a:hover {
 
 .title {
   font-family: 'ITC Korinna', sans-serif;
-  margin-right: 35%;
-  float: right;
-  display: inline;
   font-size: 2.6em;
+  margin: auto;
   height: 100%;
   color: #ffffff;
   text-transform: uppercase;
@@ -58,7 +61,7 @@ header li a:hover {
   top: 0;
   right: 0;
   left: 0;
-  height: 60px;
+  height: 80px;
 }
 
 .jservice {

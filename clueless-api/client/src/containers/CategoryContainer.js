@@ -10,6 +10,8 @@ class CategoryContainer extends Component {
               category: []
           }
       }
+min = 1
+max = 3000;
 
       componentDidMount() {
           axios.get('http://localhost:3001/api/v1/categories.json')

@@ -9,6 +9,7 @@ render() {
       <div>
         <header>
           <nav>
+          <div class="links">
              <ul>
                <li><Link to="/">Home</Link></li>
                <li><Link to="/about">About</Link></li>
@@ -16,10 +17,11 @@ render() {
                <li><Link to="/clues">All Clues</Link></li>
                <li><Link to="/random">Random</Link></li>
              </ul>
+             </div>
              <img src={alex} className="alex" alt="iconic" />
-             <div className="title">Clueless Trivia</div>
              <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
-         </nav>
+         <div className="title">Clueless Trivia</div>
+        </nav>
        </header>
       </div>
     )

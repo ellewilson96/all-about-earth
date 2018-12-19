@@ -9,7 +9,7 @@ render() {
       key={clue.id}
       >
       <div className="clue">
-          <h3 className="category-title">{clue.category.title}</h3>
+          <h3 className="clue-title">{clue.category.title}</h3>
             <h2 className="clue-value">${clue.value}</h2>
         <div className="clue-sides">
           <div className="clue-front">
