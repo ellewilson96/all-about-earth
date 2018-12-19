@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'; /* code change */
 import axios from 'axios';
 import Clues from '../components/Clues'
+
 
 class CluesContainer extends Component {
   constructor(props){
@@ -20,13 +22,17 @@ class CluesContainer extends Component {
       }))
     }
 
-    render() {
-        return (
-          <div>
-          <Clues clues={this.state.clues}/>
-          </div>
-        )
-    }
+render() {
+  return (
+    <div>
+    <Clues clues={this.state.clues} />
+    </div>
+  )
+}
 }
 
-  export default CluesContainer;
+const mapStateToProps = (state) => {
+    return { clues: state.clues}
+  }
+
+  export default connect(mapStateToProps)(CluesContainer);

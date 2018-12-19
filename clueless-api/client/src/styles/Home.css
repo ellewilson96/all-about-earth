@@ -1,0 +1,73 @@
+.home-title {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #0341a5;
+  box-shadow: 0 0 10px 0 white;
+  color: #FFFFFF;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  background-color: #0341a5;
+  font-family: 'helvetica', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000000;
+  cursor: default;
+}
+
+
+.home {
+  width: 60%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'ITC Korinna', sans-serif;
+  width: 100%;
+  height: 80%;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #0341a5;
+  display: inline-block;
+  box-shadow: 0 0 10px 0 white;
+  background-color: #0341a5;
+  text-shadow: 2px 2px #000000;
+  cursor: default;
+  position: relative;
+}
+
+.home h3 {
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.home h4 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.credit {
+  position: absolute;
+  bottom: 25px;
+  left: 20%;
+  font-family: 'Helvetica', sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px #512370;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.showhost {
+  float: left;
+  height: 98%;
+
+}

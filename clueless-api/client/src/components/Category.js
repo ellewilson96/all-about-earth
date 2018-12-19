@@ -5,7 +5,6 @@ class Category extends Component {
 
 handleEvent(e) {
   e.preventDefault();
-  console.log(this.props.category.clues)
 }
 
   render() {
