@@ -9,7 +9,7 @@ render() {
       <div>
         <header>
           <nav>
-          <div class="links">
+          <div className="links">
              <ul>
                <li><Link to="/">Home</Link></li>
                <li><Link to="/about">About</Link></li>

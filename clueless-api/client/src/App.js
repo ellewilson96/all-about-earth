@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import Home from './containers/Home';
 import CategoryContainer from './containers/CategoryContainer';
 import CluesContainer from './containers/CluesContainer';
-import Random from './components/Random';
+import RandomContainer from './containers/RandomContainer';
 import About from './components/About';
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
       <Route path="/about" component={About} />
       <Route path="/categories" component={CategoryContainer} />
       <Route path="/clues" component={CluesContainer} />
-      <Route path="/random" component={Random} />
+      <Route path="/random" component={RandomContainer} />
       </Switch>
       </div>
       </div>
