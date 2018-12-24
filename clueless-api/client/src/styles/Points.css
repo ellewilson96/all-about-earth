@@ -1,0 +1,17 @@
+
+.points {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 7%;
+
+}
+
+.points-counter {
+  padding: 20px;
+}
+
+
+.points-number {
+  padding-left: 10px;
+}

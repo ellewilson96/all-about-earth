@@ -8,7 +8,7 @@ class CluesContainer extends Component {
   constructor(props){
       super(props)
           this.state = {
-              clues: []
+              clues: [],
           }
       }
 
@@ -17,9 +17,6 @@ class CluesContainer extends Component {
           .then(response => this.setState({
                   clues: response.data
               }))
-      .catch(error => this.setState({
-        error
-      }))
     }
 
 render() {
@@ -35,4 +32,9 @@ const mapStateToProps = (state) => {
     return { clues: state.clues}
   }
 
-  export default connect(mapStateToProps)(CluesContainer);
+  const mapDispatchToProps = (dispatch) => {
+      return { type: "ADD_CLUES" }
+    }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(CluesContainer);

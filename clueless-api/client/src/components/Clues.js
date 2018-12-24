@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/Clues.css'
-
+import AnswerContainer from '../containers/AnswerContainer'
 class Clues extends Component {
+
 
 render() {
   const renderClues = this.props.clues.map((clue, id) =>
@@ -15,9 +16,9 @@ render() {
           <div className="clue-front">
             <h4>{clue.question}</h4>
           </div>
-          <div className="clue-back">
-            <h5>What is... {clue.answer}?</h5>
-          </div>
+        </div>
+        <AnswerContainer />
+        <div>
         </div>
       </div>
     </li>
@@ -34,6 +35,5 @@ render() {
   )
 }
 }
-
 
 export default Clues;

@@ -24,6 +24,10 @@
   color: #FFFFFF;
 }
 
+.answer {
+  transform: none;
+}
+
 .clues-card {
   width: 85%;
   padding-top: 10px;
@@ -76,28 +80,4 @@ h2.clue-value {
 
 .clue-sides {
   font-family: 'ITC Korinna', sans-serif;
-}
-
-.clue-sides:hover {
-  transform-style: preserve-3d;
-  transition: all .7s linear;
-  transform: rotateY(180deg);
-}
-
-.clue-sides:hover > .clue-front {
-  opacity: 0;
-  transition: opacity 1s ease-in, visibility .75s linear;
-}
-
-.clue-back {
-  display: none;
-  transform: rotateY(180deg);
-}
-
-.clue-sides:hover > .clue-back {
-  text-align: center;
-  position: relative;
-  margin: auto;
-  display: block;
-
 }

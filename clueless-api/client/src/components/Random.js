@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Clues.css'
+import AnswerContainer from '../containers/AnswerContainer'
 
   class Random extends Component {
 
@@ -14,9 +15,9 @@ import '../styles/Clues.css'
             <div className="clue-sides">
               <div className="clue-front">
                 <h4>{clue.question}</h4>
-              </div>
-              <div className="clue-back">
-                <h5>What is... {clue.answer}?</h5>
+                <div>
+                  <AnswerContainer />
+                </div>
               </div>
             </div>
           </div>

@@ -72,3 +72,16 @@ nav * {
   right: 5;
   opacity: 0.8;
 }
+
+.points-button {
+  float: right;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px #000000;
+  cursor: default;
+  height: 100%;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-right: 10px;
+}

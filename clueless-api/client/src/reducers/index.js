@@ -1,26 +1,60 @@
-export default function (state = {
-  clues: [],
-  category: [],
-  random: []
-}, action)
-  {
+import { combineReducers } from "redux";
+
+const rootReducer = combineReducers({
+  clues: cluesReducer,
+  category: categoryReducer,
+  random: randomReducer,
+  answer: answerReducer
+});
+
+export default rootReducer;
+
+
+function answerReducer(state = {
+  answer: [],
+}, action) {
+  console.log(action);
   switch (action.type) {
-    case 'FETCH_CLUES':
-      console.log("load clues")
-      return Object.assign({}, state, {
-        clue: action.clues
-      })
-      case 'FETCH_CATEGORY':
-        console.log("load category")
-        return Object.assign({}, state, {
-          category: action.category
-        })
-        case 'FETCH_RANDOM':
-          console.log("load random clue")
-          return Object.assign({}, state, {
-            random: action.random
-          })
+    case 'CHECK_ANSWER':
+      return { answer: state.answer.concat(action.payload.guess) };
+   default:
+       return state
+  }
+}
+
+
+function cluesReducer(state = {
+  clues: [],
+}, action)
+ {
+   switch (action.type) {
+     case 'ADD_CLUES':
+       return ['true'];
+      case 'CHECK_ANSWER':
+         return ['false']
     default:
-      return state
+    return state;
+  }
+}
+
+function categoryReducer(state = [], action)
+ {
+   switch (action.type) {
+     case 'ADD_CATEGORY':
+       return [...state, action.category];
+
+    default:
+    return state;
+  }
+}
+
+function randomReducer(state = [], action)
+ {
+   switch (action.type) {
+     case 'ADD_RANDOM':
+       return [...state, action.random];
+
+    default:
+    return state;
   }
 }

@@ -11,6 +11,7 @@ class RandomContainer extends Component {
       }
 
   componentDidMount() {
+    //this.props.getClues()
       axios.get('http://localhost:3001/api/v1/random.json')
           .then(response => this.setState({
                   random: response.data
