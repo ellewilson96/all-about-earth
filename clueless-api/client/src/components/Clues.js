@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Clues.css'
-import AnswerContainer from '../containers/AnswerContainer'
+import Answer from './Answer'
 class Clues extends Component {
 
 
@@ -17,7 +17,7 @@ render() {
             <h4>{clue.question}</h4>
           </div>
         </div>
-        <AnswerContainer />
+        <Answer answer={clue.answer}/>
         <div>
         </div>
       </div>

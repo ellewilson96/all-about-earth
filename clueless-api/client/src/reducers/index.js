@@ -11,13 +11,14 @@ export default rootReducer;
 
 
 function answerReducer(state = {
+
   answer: [],
 }, action) {
   console.log(action);
   switch (action.type) {
-    case 'CHECK_ANSWER':
-      return { answer: state.answer.concat(action.payload.guess) };
-   default:
+    case 'LOAD_ANSWER':
+      return [...state, action.answer];
+      default:
        return state
   }
 }
@@ -29,9 +30,7 @@ function cluesReducer(state = {
  {
    switch (action.type) {
      case 'ADD_CLUES':
-       return ['true'];
-      case 'CHECK_ANSWER':
-         return ['false']
+       return [...state, action.clues];
     default:
     return state;
   }
