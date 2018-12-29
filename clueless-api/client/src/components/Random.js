@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import Answer from '../components/Answer'
 import '../styles/Clues.css'
-import AnswerContainer from '../containers/AnswerContainer'
 
   class Random extends Component {
+
+handleEvent = (e) => {
+  e.preventDefault();
+      return(
+      <div>
+        <Answer />
+      </div>
+    )
+}
+
 
   render() {
   const randomClue = this.props.random.map((clue, id) =>
@@ -15,9 +25,9 @@ import AnswerContainer from '../containers/AnswerContainer'
             <div className="clue-sides">
               <div className="clue-front">
                 <h4>{clue.question}</h4>
-                <div>
-                  <AnswerContainer />
-                </div>
+              </div>
+              <div>
+              <button onClick={this.handleEvent.bind(this)}>REVEAL ANSWER</button>
               </div>
             </div>
           </div>

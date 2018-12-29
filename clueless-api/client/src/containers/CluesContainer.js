@@ -1,40 +1,40 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; /* code change */
-import axios from 'axios';
 import Clues from '../components/Clues'
+import { addClues } from '../actions/index';
+
 
 
 class CluesContainer extends Component {
   constructor(props){
-      super(props)
-          this.state = {
-              clues: [],
-          }
-      }
+        super(props)
+            this.state = {
+                clues: [],
+            }
+        }
+
 
   componentDidMount() {
-      axios.get('http://localhost:3001/api/v1/clues.json')
-          .then(response => this.setState({
-                  clues: response.data
-              }))
+    this.props.addClues(this.state)
+    this.setState({
+    clues: [],
+  })
     }
 
-render() {
-  return (
-    <div>
-    <Clues clues={this.state.clues} />
-    </div>
-  )
-}
+    render() {
+      console.log(this.props.clues)
+      const clues = this.props.clues;
+      return (
+        <div>
+        <Clues clues={clues}/>
+        </div>
+      )
+    }
 }
 
 const mapStateToProps = (state) => {
     return { clues: state.clues}
   }
 
-  const mapDispatchToProps = (dispatch) => {
-      return { type: "ADD_CLUES" }
-    }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(CluesContainer);
+export default connect(mapStateToProps, { addClues })(CluesContainer);
