@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/NavBar.css'
 import { Link } from 'react-router-dom';
+import Points from '../components/Points'
 import alex from '../alex-trebek.jpg'
 
 class NavBar extends Component {
@@ -17,6 +18,9 @@ render() {
                <li><Link to="/clues">All Clues</Link></li>
                <li><Link to="/random">Random</Link></li>
              </ul>
+             </div>
+             <div>
+             <Points />
              </div>
              <img src={alex} className="alex" alt="iconic" />
              <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>

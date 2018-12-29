@@ -3,12 +3,10 @@ import '../styles/Category.css'
 
 class Category extends Component {
 
-handleEvent(e) {
-  e.preventDefault();
-}
-
   render() {
-    const category = this.props.category
+    console.log(this.props.category)
+    const renderCategory = this.props.category
+
     return(
     <div>
       <div className="category-title">
@@ -16,13 +14,13 @@ handleEvent(e) {
       </div>
       <div className="category-card">
     <li
-      key={category.id}
+      key={this.props.category.id}
       >
         <div className="category">
-          <h2>{category.title}</h2>
+          <h2>{this.props.category.title}</h2>
             <div className="category-sides">
-            <h3>{category.clues_count} CLUES</h3>
-              <button onClick={this.handleEvent.bind(this)}>CLICK TO PLAY</button>
+            <h3>{this.props.category.clues_count} CLUES</h3>
+            <button onClick={this.byCategory}>CLICK TO PLAY</button>
               <div className="category-clues">
               </div>
             </div>
@@ -31,6 +29,8 @@ handleEvent(e) {
   </div>
   </div>
   )
+
+
 }
 }
 

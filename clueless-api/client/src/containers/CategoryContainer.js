@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; /* code change */
-import axios from 'axios';
 import Category from '../components/Category'
+import { addCategory } from '../actions/index';
 
 
 class CategoryContainer extends Component {
-  constructor(props){
-      super(props)
-          this.state = {
-              category: []
-          }
-      }
-
-      componentDidMount() {
-        axios.get('http://localhost:3001/api/v1/categories.json')
-            .then(response => this.setState({
-                    category: response.data
-          }))
-      }
-
-
-    render() {
-        return (
-          <div>
-          <Category category={this.state.category}/>
-          </div>
-        )
+    state = {
+      category: []
     }
+
+  componentDidMount() {
+    this.setState({
+    category: this.props.addCategory(this.state)
+  })
 }
 
-const mapStateToProps = (state) => {
-    return { category: state.category}
-  }
+render() {
+  if (this.props.category.length === 0) {
+    return (
+     <div>There is no category !</div>
+   )
+}
+  return (
+    <div>
+    <Category category={this.props.category[0]} />
+    </div>
+  )
+}
+}
 
-  const mapDispatchToProps = (dispatch) => {
-      return { type: "ADD_CATEGORY" }
+  const mapStateToProps = (state) => {
+      return { category: state.category }
     }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(CategoryContainer);
+
+
+export default connect(mapStateToProps, { addCategory })(CategoryContainer);

@@ -4,7 +4,6 @@ const rootReducer = combineReducers({
   clues: cluesReducer,
   category: categoryReducer,
   random: randomReducer,
-  answer: answerReducer
 });
 
 function cluesReducer(state = [], action){
@@ -17,22 +16,12 @@ function cluesReducer(state = [], action){
 }
 
 
-function answerReducer(state = [], action) {
-  switch (action.type) {
-    case 'LOAD_ANSWER':
-      return [...state, action.answer];
-      default:
-       return state
-  }
-}
-
 
 function categoryReducer(state = [], action)
  {
    switch (action.type) {
      case 'ADD_CATEGORY':
        return [...state, action.category];
-
     default:
     return state;
   }

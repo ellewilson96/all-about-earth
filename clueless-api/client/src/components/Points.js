@@ -7,11 +7,11 @@ class Points extends Component {
     points: 0
   }
 
-  onChange = (e) => {
+  onClickButton = (e) => {
     e.preventDefault();
     const currentPoints = this.state.points
     this.setState({
-      points: currentPoints + this.props.clue.value
+      points: currentPoints + 100
   })
 }
 
@@ -32,12 +32,16 @@ class Points extends Component {
 
 
   render() {
-    console.log(this.value)
     return (
       <div className="points">
-        Your BANK:
+        Your Bank:
         <div className="points-number">
           ${this.state.points}
+        </div>
+        <div className="points-button">
+        <button onClick={this.onClickButton}>
+        Click me!
+        </button>
         </div>
       </div>
     )

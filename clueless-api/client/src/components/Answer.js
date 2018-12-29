@@ -3,7 +3,7 @@ import '../styles/Answer.css'
 
 class Answer extends Component {
   state = {
-    text: 'Reveal Answer'
+    text: '',
   }
 
   onClickButton = (e) => {
@@ -14,12 +14,11 @@ class Answer extends Component {
   }
 
   render() {
-    console.log(this.answer)
     return(
       <div>
         <div>
         <button onClick={this.onClickButton}>
-        {this.state.text}
+        What is... {this.state.text}?
         </button>
         </div>
       </div>

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import '../styles/Clues.css'
 import Answer from './Answer'
-import Points from './Points'
 
 
 class Clues extends Component {
 
 
 render() {
-  console.log(this.props.clues)
   const renderClues = this.props.clues.map((clue, id) =>
     <li
       key={clue.id}
@@ -24,7 +22,6 @@ render() {
           <Answer clue={clue}/>
           </div>
           <div>
-          <Points clue={clue}/>
           </div>
         </div>
       </div>
