@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import '../styles/Clues.css'
+import Answer from './Answer'
+import Points from './Points'
 
 
 class Clues extends Component {
-  //
-  // handleEvent(e) {
-  //   e.preventDefault();
-  //   const answer = this.answer
-  //   return(
-  //       <div className="answer">
-  //         <Answer answer={answer} />
-  //       </div>
-  //     )
-  // }
+
+
 render() {
+  console.log(this.props.clues)
   const renderClues = this.props.clues.map((clue, id) =>
     <li
       key={clue.id}
@@ -26,25 +21,26 @@ render() {
             <h4>{clue.question}</h4>
           </div>
           <div>
-          <button onClick={this.handleEvent.bind(clue)}>REVEAL ANSWER</button>
+          <Answer clue={clue}/>
           </div>
-          <div id="answer">
+          <div>
+          <Points clue={clue}/>
           </div>
         </div>
       </div>
     </li>
 )
+
   return(
-    <div>
+  <div>
     <div className="clues-title">
-    ALL CLUES!
+      ALL CLUES!
     </div>
     <div className="clues-card">
       {renderClues}
+     </div>
     </div>
-    </div>
-  )
-}
+  )}
 }
 
 

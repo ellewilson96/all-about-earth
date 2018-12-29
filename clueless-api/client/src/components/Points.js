@@ -3,18 +3,15 @@ import React, { Component } from 'react';
 import '../styles/Points.css'
 
 class Points extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      points: 0
-    }
+  state = {
+    points: 0
   }
 
-increasePoints(e) {
-  e.preventDefault();
-  const currentPoints = this.state.points
-  this.setState({
-    points: currentPoints + 100
+  onChange = (e) => {
+    e.preventDefault();
+    const currentPoints = this.state.points
+    this.setState({
+      points: currentPoints + this.props.clue.value
   })
 }
 
@@ -35,11 +32,9 @@ increasePoints(e) {
 
 
   render() {
+    console.log(this.value)
     return (
       <div className="points">
-        <div className="points-counter">
-          <button onClick={this.increasePoints.bind(this)}>ADD MONEY </button>
-        </div>
         Your BANK:
         <div className="points-number">
           ${this.state.points}
@@ -47,6 +42,7 @@ increasePoints(e) {
       </div>
     )
   }
+
 }
 
 

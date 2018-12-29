@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Points from './Points'
 import '../styles/NavBar.css'
 import { Link } from 'react-router-dom';
 import alex from '../alex-trebek.jpg'
@@ -22,9 +21,6 @@ render() {
              <img src={alex} className="alex" alt="iconic" />
              <div className="jservice">powered by <a href="http://jservice.io">jService</a></div>
          <div className="title">Clueless Trivia</div>
-         <div className="points-button">
-          <Points />
-         </div>
         </nav>
        </header>
       </div>

@@ -8,7 +8,6 @@ const rootReducer = combineReducers({
 });
 
 function cluesReducer(state = [], action){
-  console.log(action.clues);
    switch (action.type) {
      case 'ADD_CLUES':
      return [...state, action.clues];
