@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/NavBar.css'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Points from '../components/Points'
 import alex from '../alex-trebek.jpg'
 
@@ -12,11 +12,11 @@ render() {
           <nav>
           <div className="links">
              <ul>
-               <li><Link to="/">Home</Link></li>
-               <li><Link to="/about">About</Link></li>
-               <li><Link to="/categories">By Category</Link></li>
-               <li><Link to="/clues">All Clues</Link></li>
-               <li><Link to="/random">Random</Link></li>
+               <li><NavLink to="/">Home</NavLink></li>
+               <li><NavLink to="/about">About</NavLink></li>
+               <li><NavLink to="/categories">By Category</NavLink></li>
+               <li><NavLink to="/clues">All Clues</NavLink></li>
+               <li><NavLink to="/random">Random</NavLink></li>
              </ul>
              </div>
              <div>

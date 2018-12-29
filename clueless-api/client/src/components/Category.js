@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import '../styles/Category.css'
+import Answer from './Answer'
 
 class Category extends Component {
 
   render() {
-    console.log(this.props.category)
-    const renderCategory = this.props.category
+    const byCategory = this.props.category.clues.map((clue, id) =>
+      <li
+        key={clue.id}
+        >
+        <div className="clue">
+          <h2 className="clue-value">${clue.value}</h2>
+          <div className="clue-sides">
+            <div className="clue-front">
+              <h4>{clue.question}</h4>
+            </div>
+            <div>
+            <Answer clue={clue}/>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </li>
+  )
 
-    return(
+  return(
     <div>
       <div className="category-title">
       PLAY BY CATEGORY!
@@ -19,14 +37,16 @@ class Category extends Component {
         <div className="category">
           <h2>{this.props.category.title}</h2>
             <div className="category-sides">
-            <h3>{this.props.category.clues_count} CLUES</h3>
-            <button onClick={this.byCategory}>CLICK TO PLAY</button>
+            <h4>{this.props.category.clues_count} CLUES</h4>
               <div className="category-clues">
-              </div>
             </div>
+          </div>
         </div>
     </li>
   </div>
+  <div className="clues-card">
+    {byCategory}
+   </div>
   </div>
   )
 

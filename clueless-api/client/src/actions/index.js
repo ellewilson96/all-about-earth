@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_CLUES, ADD_CATEGORY } from './types'
+import { ADD_CLUES, ADD_CATEGORY, ADD_RANDOM } from './types'
 
 export function addClues() {
   return (dispatch) => {
@@ -23,6 +23,21 @@ export function addCategory() {
              dispatch({
                type: ADD_CATEGORY,
                category: response.data
+        })
+      })
+      .catch(error => {
+        throw(error);
+      });
+  }
+}
+
+export function addRandom() {
+  return (dispatch) => {
+    return axios.get('http://localhost:3001/api/v1/random.json')
+           .then(response => {
+             dispatch({
+               type: ADD_RANDOM,
+               random: response.data
         })
       })
       .catch(error => {

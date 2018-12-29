@@ -1,41 +1,35 @@
 import React, { Component } from 'react';
-import Answer from '../components/Answer'
 import '../styles/Clues.css'
+import Answer from './Answer'
+
 
   class Random extends Component {
 
-handleEvent = (e) => {
-  e.preventDefault();
-      return(
-      <div>
-        <Answer />
-      </div>
-    )
-}
 
-
-  render() {
-  const randomClue = this.props.random.map((clue, id) =>
+    render() {
+      const randomClue = this.props.random.map((clue, id) =>
         <li
           key={clue.id}
           >
           <div className="clue">
-          <h2 className="clue-title">{clue.category.title}</h2>
+              <h3 className="clue-title">{clue.category.title}</h3>
                 <h2 className="clue-value">${clue.value}</h2>
             <div className="clue-sides">
               <div className="clue-front">
                 <h4>{clue.question}</h4>
               </div>
               <div>
-              <button onClick={this.handleEvent.bind(this)}>REVEAL ANSWER</button>
+              <Answer clue={clue}/>
+              </div>
+              <div>
               </div>
             </div>
           </div>
         </li>
     )
     return(
-      <div>
-      <div className="clues-title">
+        <div>
+          <div className="clues-title">
       RANDOM CLUE!
       </div>
       <div className="random-clues-card">
