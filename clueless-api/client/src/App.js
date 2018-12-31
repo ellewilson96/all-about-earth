@@ -25,6 +25,11 @@ class App extends Component {
       <Route path="/random" component={RandomContainer} />
       </Switch>
       </div>
+      <footer>
+        <div>
+          BUILT BY ELLE WILSON FOR THE FLATIRON SCHOOL, 2018
+        </div>
+      </footer>
       </div>
       </BrowserRouter>
       </div>

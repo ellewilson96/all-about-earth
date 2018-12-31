@@ -1,4 +1,4 @@
-.home-title {
+.home-container {
   text-transform: uppercase;
   text-align: center;
   border-radius: 5px;
@@ -17,42 +17,28 @@
 }
 
 
-.home {
-  width: 60%;
-  margin: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  font-family: 'ITC Korinna', sans-serif;
-  width: 100%;
-  height: 80%;
-  font-weight: bold;
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:active {
   border-radius: 5px;
-  border: 2px solid #0341a5;
-  display: inline-block;
-  box-shadow: 0 0 10px 0 white;
-  background-color: #0341a5;
-  text-shadow: 2px 2px #000000;
-  cursor: default;
-  position: relative;
+  border: 1px solid #0341a5;
+  box-shadow: 0 0 10px 0 black;
 }
 
-.home h3 {
-  font-family: 'Helvetica', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
+.home-container a {
+  font-style: italic;
+  color: #000000;
+  font-size: 0.6em;
 }
 
-
-.home h4 {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  text-align: center;
+.home-container a:hover {
+  text-decoration: none;
 }
+
 
 .credit {
   position: absolute;
@@ -64,10 +50,4 @@
   font-size: 0.8em;
   text-transform: uppercase;
   text-align: center;
-}
-
-.showhost {
-  float: left;
-  height: 98%;
-
 }
