@@ -1,24 +1,10 @@
-# README
+## Clueless Trivia
+A fun trivia application which uses a Rails API back-end to power a Javascript/React/Redux front-end. Many thanks to [jService](http://jservice.io) and [j!Archive](http://j-archive.com/)!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start the application, you can run:
 
-Things you may want to cover:
+### `rake start`
 
-* Ruby version
+Runs both [the client-side](http://localhost:3000) and [the Rails back-end](http://localhost:3001) on [http://localhost:3000](http://localhost:3000).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Have fun!

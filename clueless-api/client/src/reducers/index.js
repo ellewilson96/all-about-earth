@@ -16,7 +16,6 @@ function cluesReducer(state = [], action){
 }
 
 
-
 function categoryReducer(state = [], action)
  {
    switch (action.type) {
