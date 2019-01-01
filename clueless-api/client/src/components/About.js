@@ -15,7 +15,7 @@ import '../styles/About.css'
       <h4>BUILT BY A MASSIVE FAN OF JEOPARDY. THIS WEB APPLICATION IS POWERED BY THE JSERVICE API, WHICH USES DATA
       FROM THE OFFICIAL JEOPARDY ARCHIVE (JARCHIVE). BUILT WITH RUBY ON RAILS, JAVASCRIPT, REACT, AND REDUX.</h4>
       <div class="snl-image">
-      <img src={snl} className="snl" />
+      <img src={snl} className="snl" alt="snl" />
       </div>
       </div>
       </div>
