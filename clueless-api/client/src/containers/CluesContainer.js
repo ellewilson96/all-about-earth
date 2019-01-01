@@ -9,17 +9,16 @@ class CluesContainer extends Component {
         clues: []
       }
 
-
   componentDidMount() {
     this.setState({
     clues: this.props.addClues(this.state)
   })
-    }
+}
 
     render() {
       if (this.props.clues.length === 0) {
         return (
-         <div>There aren't any clues !</div>
+         <div className="clues-title">loading...</div>
        )
     }
       return (

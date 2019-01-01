@@ -18,7 +18,7 @@ class CategoryContainer extends Component {
 render() {
   if (this.props.category.length === 0) {
     return (
-     <div>There is no category !</div>
+     <div className="category-title">LOADING...</div>
    )
 }
   return (

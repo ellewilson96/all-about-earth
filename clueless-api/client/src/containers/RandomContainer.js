@@ -17,7 +17,7 @@ class RandomContainer extends Component {
       render() {
         if (this.props.random.length === 0) {
           return (
-           <div>There aren't any random clues !</div>
+           <div className="random-title">LOADING...</div>
          )
       }
         return (
