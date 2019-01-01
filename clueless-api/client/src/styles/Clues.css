@@ -81,3 +81,8 @@ h2.clue-value {
 .clue-sides {
   font-family: 'ITC Korinna', sans-serif;
 }
+
+.random-button {
+  position: relative;
+  margin-top: 20%;
+}

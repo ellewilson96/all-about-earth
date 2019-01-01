@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import '../styles/Category.css'
 import Answer from './Answer'
+import { Link } from 'react-router-dom'
+
 
 class Category extends Component {
+
+
+reloadPage() {
+      window.location.reload();
+    }
+
 
   render() {
     const byCategory = this.props.category.clues.map((clue, id) =>
@@ -38,7 +46,8 @@ class Category extends Component {
           <h2>{this.props.category.title}</h2>
             <div className="category-sides">
             <h4>{this.props.category.clues_count} CLUES</h4>
-              <div className="category-clues">
+            <div class="game-button">
+            <button type="button" onClick={() => this.reloadPage()}> <span>TRY ANOTHER</span> </button>
             </div>
           </div>
         </div>

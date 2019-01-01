@@ -5,6 +5,9 @@ import Answer from './Answer'
 
   class Random extends Component {
 
+    reloadPage() {
+          window.location.reload();
+        }
 
     render() {
       const randomClue = this.props.random.map((clue, id) =>
@@ -21,7 +24,8 @@ import Answer from './Answer'
               <div>
               <Answer clue={clue}/>
               </div>
-              <div>
+              <div class="random-button">
+              <button type="button" onClick={() => this.reloadPage()}> <span>TRY ANOTHER</span> </button>
               </div>
             </div>
           </div>
