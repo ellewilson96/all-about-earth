@@ -5,15 +5,10 @@ import { addClues } from '../actions/index';
 
 
 class CluesContainer extends Component {
-    state = {
-        clues: []
-      }
 
   componentDidMount() {
-    this.setState({
-    clues: this.props.addClues(this.state)
-  })
-}
+    this.props.addClues()
+  }
 
     render() {
       if (this.props.clues.length === 0) {
@@ -23,7 +18,7 @@ class CluesContainer extends Component {
     }
       return (
         <div>
-        <Clues clues={this.props.clues[0]} />
+        <Clues clues={this.props.clues} />
         </div>
       )
     }

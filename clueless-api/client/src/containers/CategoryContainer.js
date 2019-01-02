@@ -5,15 +5,10 @@ import { addCategory } from '../actions/index';
 
 
 class CategoryContainer extends Component {
-    state = {
-      category: []
-    }
 
   componentDidMount() {
-    this.setState({
-    category: this.props.addCategory(this.state)
-  })
-}
+    this.props.addCategory()
+  }
 
 render() {
   if (this.props.category.length === 0) {
@@ -23,7 +18,7 @@ render() {
 }
   return (
     <div>
-    <Category category={this.props.category[0]} />
+    <Category category={this.props.category} />
     </div>
   )
 }

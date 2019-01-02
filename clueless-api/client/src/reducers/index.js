@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
 function cluesReducer(state = [], action){
    switch (action.type) {
      case 'ADD_CLUES':
-     return [...state, action.clues];
+     return action.clues;
     default:
     return state;
   }
@@ -20,7 +20,7 @@ function categoryReducer(state = [], action)
  {
    switch (action.type) {
      case 'ADD_CATEGORY':
-       return [...state, action.category];
+       return action.category;
     default:
     return state;
   }
@@ -30,7 +30,7 @@ function randomReducer(state = [], action)
  {
    switch (action.type) {
      case 'ADD_RANDOM':
-       return [...state, action.random];
+       return action.random;
 
     default:
     return state;

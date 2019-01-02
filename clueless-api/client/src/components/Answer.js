@@ -15,12 +15,25 @@ class Answer extends Component {
     })
   }
 
+  onClickButton2 = (e) => {
+    e.preventDefault();
+    this.setState({
+      text: '',
+      visible: false
+    })
+  }
+
   render() {
     return(
       <div>
         <div>
         <button onClick={this.onClickButton}>
         What is... {this.state.text}?
+        </button>
+        </div>
+        <div className="hide-link">
+        <button onClick={this.onClickButton2} >
+        Hide
         </button>
         </div>
       </div>

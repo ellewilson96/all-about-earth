@@ -5,15 +5,11 @@ import { addRandom } from '../actions/index';
 
 
 class RandomContainer extends Component {
-  state = {
-      random: []
-    }
 
     componentDidMount() {
-      this.setState({
-      random: this.props.addRandom(this.state)
-    })
+      this.props.addRandom()
   }
+
       render() {
         if (this.props.random.length === 0) {
           return (
@@ -22,7 +18,7 @@ class RandomContainer extends Component {
       }
         return (
           <div>
-          <Random random={this.props.random[0]} />
+          <Random random={this.props.random} />
           </div>
         )
       }

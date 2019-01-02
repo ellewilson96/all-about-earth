@@ -24,7 +24,7 @@ import Answer from './Answer'
               <div>
               <Answer clue={clue}/>
               </div>
-              <div class="random-button">
+              <div className="random-button">
               <button type="button" onClick={() => this.reloadPage()}> <span>TRY ANOTHER</span> </button>
               </div>
             </div>

@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
       <h2>WELCOME TO</h2>
       <h1>CLUELESS TRIVIA</h1>
       </div>
-      <div class="game-button">
+      <div className="game-button">
         <button>
         <Link to="/clues">GET YOUR GAME ON</Link>
         </button>

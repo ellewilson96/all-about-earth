@@ -44,12 +44,14 @@
 .clue {
   font-family: 'Helvetica', sans-serif;
   width: 100%;
-  height: 60%;
+  min-height: 60%;
+  height: auto;
   font-weight: bold;
   border-radius: 5px;
   border: 2px solid #0341a5;
   display: inline-block;
   margin-bottom: 30px;
+  padding-bottom: 10px;
   box-shadow: 0 0 10px 0 white;
   background-color: #0341a5;
   text-shadow: 2px 2px #000000;

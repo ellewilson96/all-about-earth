@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Category.css'
 import Answer from './Answer'
-import { Link } from 'react-router-dom'
 
 
 class Category extends Component {
@@ -46,7 +45,7 @@ reloadPage() {
           <h2>{this.props.category.title}</h2>
             <div className="category-sides">
             <h4>{this.props.category.clues_count} CLUES</h4>
-            <div class="game-button">
+            <div className="game-button">
             <button type="button" onClick={() => this.reloadPage()}> <span>TRY ANOTHER</span> </button>
             </div>
           </div>

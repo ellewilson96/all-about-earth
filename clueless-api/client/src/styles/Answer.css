@@ -1,3 +1,5 @@
-.answer {
-
+.hide-link {
+  visibility: hidden;
+  background-color: none;
+  font-size: 0.7em;
 }
